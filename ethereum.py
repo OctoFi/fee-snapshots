@@ -4,6 +4,7 @@ import os
 from dotenv import load_dotenv
 from pprint import pprint as pp
 import requests
+import csv
 
 load_dotenv()
 
@@ -39,7 +40,8 @@ def get_balances(transfers):
     for t in transfers:
         balances[t["from"]] -= t["amount"]
         balances[t["to"]] += t["amount"]
-    bottom_limit = Decimal("0.00000000001")
+    # bottom_limit = Decimal("0.00000000001")
+    bottom_limit = Decimal("0.0008")
     balances = {k: balances[k] for k in balances if balances[k] > bottom_limit}
     return balances
 
@@ -49,3 +51,10 @@ def get_balances_list(transfers):
     balances = [{"address": a, "amount": b} for a, b in balances.items()]
     balances = sorted(balances, key=lambda b: -abs(b["amount"]))
     return balances
+
+def write_csv_file(filename, rows):
+    csv_fields = ['address', 'amount']
+    with open(filename, 'w') as csvfile:
+        csvwriter = csv.DictWriter(csvfile, fieldnames = csv_fields)
+        csvwriter.writeheader()
+        csvwriter.writerows(rows)
