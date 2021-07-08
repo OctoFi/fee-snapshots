@@ -1,3 +1,5 @@
-# Fee Distributions
+# Fee Snapshots
 
-`python3 runner.py > filename.txt`
+Python script for taking balance snapshots
+
+`python3 runner.py`

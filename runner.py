@@ -41,41 +41,95 @@ transfers += trns_1160
 trns_1170 = get_contract_transfers(contract, from_block="0xB10080", to_block="0xB28720")
 transfers += trns_1170
 
-# to 11800000
-trns_1180 = get_contract_transfers(contract, from_block="0xB28720", to_block="0xB40DC0")
-transfers += trns_1180
 
-# to 11900000
-trns_1190 = get_contract_transfers(contract, from_block="0xB40DC0", to_block="0xB59460")
-transfers += trns_1190
+#######################
+## RECREATE OLD SNAPSHOTS
+#######################
 
-# to 12000000
-trns_1200 = get_contract_transfers(contract, from_block="0xB59460", to_block="0xB71B00")
-transfers += trns_1200
+##################
+## FEBRUARY SNAPSHOT
+##################
 
-# to 12100000
-trns_1210 = get_contract_transfers(contract, from_block="0xB71B00", to_block="0xB8A1A0")
-transfers += trns_1210
+# to 11769165
+trns_11769165 = get_contract_transfers(contract, from_block="0xB28720", to_block="0xB3954D")
+transfers += trns_11769165
 
-# to 12200000
-trns_1220 = get_contract_transfers(contract, from_block="0xB8A1A0", to_block="0xBA2840")
-transfers += trns_1220
+## Feb-01-2021 08:08:26 AM +UTC
+# balances_11769165_json = open('balances/02-01-2021.json', 'w')
+# balances_11769165 = get_balances_list(transfers)
+# print(balances_11769165, file = balances_11769165_json)
+# balances_11769165_json.close()
 
-# to 12300000
-trns_1230 = get_contract_transfers(contract, from_block="0xBA2840", to_block="0xBBAEE0")
-transfers += trns_1230
+# to 11944679
+trns_11944679 = get_contract_transfers(contract, from_block="0xB3954D", to_block="0xB642E7")
+transfers += trns_11944679
+
+## Feb-28-2021 08:08:21 AM +UTC
+# balances_11944679_json = open('balances/02-28-2021.json', 'w')
+# balances_11944679 = get_balances_list(transfers)
+# print(balances_11944679, file = balances_11944679_json)
+# balances_11944679_json.close()
+
+##################
+## MARCH SNAPSHOT
+##################
+
+# to 11951174
+trns_11951174 = get_contract_transfers(contract, from_block="0xB642E7", to_block="0xB65C46")
+transfers += trns_11951174
+
+## Mar-01-2021 08:08:10 AM +UTC
+# balances_11951174_json = open('balances/03-01-2021.json', 'w')
+# balances_11951174 = get_balances_list(transfers)
+# print(balances_11951174, file = balances_11951174_json)
+# balances_11951174_json.close()
+
+# to 12145960
+trns_12145960 = get_contract_transfers(contract, from_block="0xB65C46", to_block="0xB95528")
+transfers += trns_12145960
+
+## Mar-31-2021 08:08:28 AM +UTC
+# balances_12145960_json = open('balances/03-31-2021.json', 'w')
+# balances_12145960 = get_balances_list(transfers)
+# print(balances_12145960, file = balances_12145960_json)
+# balances_12145960_json.close()
+
+##################
+## APRIL SNAPSHOT
+##################
+
+# to 12152444
+trns_12152444 = get_contract_transfers(contract, from_block="0xB95528", to_block="0xB96E7C")
+transfers += trns_12152444
+
+## Apr-01-2021 08:08:08 AM +UTC
+# balances_12152444_json = open('balances/04-01-2021.json', 'w')
+# balances_12152444 = get_balances_list(transfers)
+# print(balances_12152444, file = balances_12152444_json)
+# balances_12152444_json.close()
+
+# to 12340696
+trns_12340696 = get_contract_transfers(contract, from_block="0xB96E7C", to_block="0xBC4DD8")
+transfers += trns_12340696
+
+## Apr-30-2021 08:08:18 AM +UTC
+# balances_12340696_json = open('balances/04-30-2021.json', 'w')
+# balances_12340696 = get_balances_list(transfers)
+# print(balances_12340696, file = balances_12340696_json)
+# balances_12340696_json.close()
 
 
 #######################
-## SNAPSHOTS
+## NEW SNAPSHOTS
 #######################
 
-#######################
+
+##################
 ## MAY SNAPSHOT
-#######################
+##################
 
 # to 12347119
-trns_12347119 = get_contract_transfers(contract, from_block="0xBBAEE0", to_block="0xBC66EF")
+trns_12347119 = get_contract_transfers(contract, from_block="0xBC4DD8", to_block="0xBC66EF")
 transfers += trns_12347119
 
 ## May-01-2021 08:08:12 AM +UTC
@@ -95,9 +149,9 @@ transfers += trns_12540966
 # balances_12540966_json.close()
 
 
-#######################
+##################
 ## JUNE SNAPSHOT
-#######################
+##################
 
 # to 12547387
 trns_12547387 = get_contract_transfers(contract, from_block="0xBF5C26", to_block="0xBF753B")
@@ -120,9 +174,9 @@ transfers += trns_12734165
 # balances_12734165_json.close()
 
 
-#######################
+##################
 ## JULY SNAPSHOT
-#######################
+##################
 
 # to 12740599
 trns_12740599 = get_contract_transfers(contract, from_block="0xC24ED5", to_block="0xC267F7")
@@ -143,9 +197,9 @@ transfers += trns_12740599
 
 
 
-#######################
+##################
 ## TO LATEST BLOCK
-#######################
+##################
 
 trns_latest = get_contract_transfers(contract, from_block="0xC267F7", to_block="latest")
 transfers += trns_latest
