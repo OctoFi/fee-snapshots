@@ -52,6 +52,7 @@ def get_balances_list(transfers):
     balances = sorted(balances, key=lambda b: -abs(b["amount"]))
     return balances
 
+
 def write_csv_file(filename, rows):
     csv_fields = ['address', 'amount']
     with open(filename, 'w') as csvfile:
